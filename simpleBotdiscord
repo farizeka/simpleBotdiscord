@@ -1,0 +1,16 @@
+import discord
+from discord.ext import commands
+
+client = commands.Bot(command_prefix="!", intents=discord.Intents.all())
+
+@client.event
+async def on_ready():
+    print("The Bot Is Ready To Use")
+    print("-----------------------")
+
+
+@client.command()
+async def hello(ctx):
+    await ctx.send("Hello, I'm a bot")
+
+client.run('MTIyNzA3MjcyODY3NTI1NDMzNg.GwCcpx.tP5JhRm6Dx7oxAgaJ8SVQsQod_LpsI9y3viHdg')
